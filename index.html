@@ -1,16 +1,16 @@
 
-   <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack – Verified AI/ML & LLMOps Expert</title>
+  <title>Jack – AI/ML & Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --toptal-blue: #0052cc;
-      --toptal-green: #00cd6b; /* Toptal's signature action color */
+      --toptal-green: #00cd6b; 
       --deep-black: #111827;
       --text-main: #374151;
       --border-color: #e5e7eb;
@@ -20,12 +20,11 @@
     body { 
       font-family: 'Inter', sans-serif; 
       color: var(--text-main); 
-      background: var(--white); 
+      background: #ffffff; 
       margin: 0;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Toptal Style Header */
     header {
       padding: 20px 80px;
       display: flex;
@@ -34,9 +33,8 @@
       border-bottom: 1px solid var(--border-color);
     }
 
-    .logo { font-weight: 800; font-size: 1.5rem; color: var(--deep-black); }
+    .logo { font-weight: 800; font-size: 1.5rem; color: var(--deep-black); letter-spacing: -1px; }
 
-    /* Hero Section */
     .hero-container {
       display: flex;
       max-width: 1200px;
@@ -53,119 +51,168 @@
       color: var(--deep-black); 
       line-height: 1.1;
       margin-bottom: 25px;
+      letter-spacing: -0.03em;
     }
 
-    .hero-text p { font-size: 1.25rem; line-height: 1.6; color: var(--text-main); margin-bottom: 30px; }
+    .hero-text p { font-size: 1.2rem; line-height: 1.6; color: var(--text-main); margin-bottom: 30px; }
 
-    /* The "Verified Expert" Sidebar Card */
     .expert-card {
       flex: 1;
       background: var(--bg-light);
       border: 1px solid var(--border-color);
       padding: 30px;
       border-radius: 4px;
-      position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     .expert-status {
       color: var(--toptal-green);
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .expert-status::before { content: '✔'; }
+    .expert-name { font-weight: 700; font-size: 1.4rem; color: var(--deep-black); margin-bottom: 4px; }
+    .expert-sub { font-size: 0.95rem; color: #6b7280; margin-bottom: 20px; }
 
-    .expert-name { font-weight: 700; font-size: 1.2rem; color: var(--deep-black); }
-    .expert-sub { font-size: 0.9rem; color: #6b7280; margin-bottom: 20px; }
-
-    /* Toptal Green Button */
-    .btn-green {
-      background: var(--toptal-green);
+    .btn-linkedin {
+      background: #0077b5; /* LinkedIn Blue */
       color: white;
       padding: 16px 32px;
       border-radius: 4px;
       text-decoration: none;
       font-weight: 700;
       display: inline-block;
-      transition: background 0.2s;
+      transition: opacity 0.2s;
     }
 
-    .btn-green:hover { background: #00b35d; }
+    .btn-linkedin:hover { opacity: 0.9; }
 
-    /* Content Grid */
-    .container { max-width: 1200px; margin: 100px auto; padding: 0 40px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
+    .section-label { 
+        text-transform: uppercase; 
+        font-weight: 800; 
+        font-size: 0.85rem; 
+        color: var(--toptal-blue); 
+        margin-bottom: 40px; 
+        display: block;
+        letter-spacing: 2px;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
     .project-card {
-      border-top: 4px solid var(--toptal-blue);
-      padding: 30px;
+      border-top: 1px solid var(--border-color);
+      padding: 40px 30px;
       background: white;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 280px;
     }
 
-    .project-card:hover { transform: translateY(-5px); }
-    .project-card h3 { margin-top: 0; font-weight: 800; }
+    .project-card:hover { border-top: 4px solid var(--toptal-blue); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+    
+    .project-index { font-weight: 800; color: #e5e7eb; margin-bottom: 20px; font-size: 1.2rem; }
+    .project-card h3 { margin: 0 0 15px 0; font-weight: 800; color: var(--deep-black); font-size: 1.3rem; }
+    .project-card p { font-size: 0.95rem; color: var(--text-main); line-height: 1.5; flex-grow: 1; margin-bottom: 20px;}
 
-    @media (max-width: 900px) {
+    .card-link { color: var(--toptal-blue); font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+    .card-link:hover { text-decoration: underline; }
+
+    @media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
       .hero-container { flex-direction: column; text-align: center; }
       .grid { grid-template-columns: 1fr; }
+      header { padding: 20px 40px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">JACK.AI</div>
+    <div class="logo">JACK.ENG</div>
     <nav>
-      <a href="mailto:js8671574@gmail.com" style="text-decoration:none; font-weight:600; color:var(--text-main)">Hire Expert</a>
+      <a href="mailto:js8671574@gmail.com" style="text-decoration:none; font-weight:700; color:var(--deep-black); font-size: 0.9rem;">EMAIL CONTACT</a>
     </nav>
   </header>
 
   <section class="hero-container">
     <div class="hero-text">
-      <h1>Deploying the <span style="color:var(--toptal-blue)">Top 3%</span> of AI/ML Engineering</h1>
-      <p>Jack is an exclusive specialist in production-grade LLMOps, Federated Learning, and high-performance compute optimization. Expert at turning complex blueprints into scalable infrastructure.</p>
-      <a href="https://www.linkedin.com/in/jack-steve-7431112a9" class="btn-green">Hire Top AI Talent</a>
+      <h1>Engineering the Future of <span style="color:var(--toptal-blue)">AI Systems.</span></h1>
+      <p>Software Engineer specialized in AI/ML Infrastructure. I design and deploy production-grade LLMOps, privacy-preserving Federated Learning systems, and high-performance compute architectures.</p>
+      <a href="https://www.linkedin.com/in/jack-steve-7431112a9" target="_blank" class="btn-linkedin">Connect on LinkedIn</a>
     </div>
 
     <div class="expert-card">
-      <div class="expert-status">Verified Expert</div>
+      <div class="expert-status">✓ Verified Engineer</div>
       <div class="expert-name">Jack Steve</div>
-      <div class="expert-sub">AI Infrastructure & LLMOps</div>
-      <div style="border-top: 1px solid #ddd; padding-top: 15px; font-size: 0.85rem;">
-        <strong>PREVIOUSLY AT</strong><br>
-        <span style="letter-spacing: 1px; color: #444;">DISTRIBUTED SYSTEMS INC.</span>
+      <div class="expert-sub">AI/ML & Software Engineering</div>
+      <div style="border-top: 1px solid #e5e7eb; padding-top: 20px; margin-top: 10px;">
+        <span style="font-size: 0.75rem; font-weight: 800; color: #9ca3af; letter-spacing: 1px;">CORE STACK</span>
+        <p style="font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin: 8px 0 0 0;">PyTorch • LangChain • vLLM • MLOps • Distributed Systems</p>
       </div>
     </div>
   </section>
 
   <main class="container">
+    <span class="section-label">Engineering Blueprints & Projects</span>
     <div class="grid">
+      
       <div class="project-card">
-        <h3 style="color: var(--toptal-green)">01</h3>
-        <h3>Fraud Detector</h3>
-        <p>Advanced real-time transaction monitoring documentation hub. Built for enterprise financial safety.</p>
-        <a href="https://jacksteve-code.github.io/Fraud-detector/" style="color:var(--toptal-blue); font-weight:700; text-decoration:none;">View Case Study →</a>
+        <div class="project-index">01</div>
+        <h3>Fraud Detector Hub</h3>
+        <p>Enterprise-grade documentation for real-time fraud detection strategies and monitoring infrastructure.</p>
+        <a href="https://jacksteve-code.github.io/Fraud-detector/" class="card-link">Explore Documentation →</a>
       </div>
 
       <div class="project-card">
-        <h3 style="color: var(--toptal-blue)">02</h3>
-        <h3>LLMOps Pipeline</h3>
-        <p>46-page guide on enterprise RAG, vLLM, and high-performance model observability.</p>
-        <a href="https://jacksteve-code.github.io/Scalable-llmop/" style="color:var(--toptal-blue); font-weight:700; text-decoration:none;">View Pipeline →</a>
+        <div class="project-index">02</div>
+        <h3>Scalable LLMOps</h3>
+        <p>Production architecture guide for LLM deployment, covering RAG, vLLM, and enterprise observability.</p>
+        <a href="https://jacksteve-code.github.io/Scalable-llmop/" class="card-link">View Pipeline Guide →</a>
       </div>
 
       <div class="project-card">
-        <h3>03</h3>
-        <h3>FL Blueprint</h3>
-        <p>Decentralized AI training manual focusing on privacy and Differential Privacy.</p>
-        <a href="https://jacksteve-code.github.io/federated-blueprint/" style="color:var(--toptal-blue); font-weight:700; text-decoration:none;">Read Blueprint →</a>
+        <div class="project-index">03</div>
+        <h3>Federated Learning</h3>
+        <p>Deep dive into privacy-preserving decentralized AI training using Differential Privacy and NVIDIA FLARE.</p>
+        <a href="https://jacksteve-code.github.io/federated-blueprint/" class="card-link">View Blueprint →</a>
       </div>
+
+      <div class="project-card">
+        <div class="project-index">04</div>
+        <h3>Infrastructure Optimization</h3>
+        <p>Technical analysis of GPU/TPU hardware stacks and mixed-precision training for large-scale models.</p>
+        <a href="https://jacksteve-code.github.io/AI-Infrastructure-and-compute-optimization/" class="card-link">Read Deep Dive →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">05</div>
+        <h3>Transformer Evolution</h3>
+        <p>An architectural journey from RNNs to modern Self-Attention mechanisms and Transformer math.</p>
+        <a href="https://jacksteve-code.github.io/RNNS-to-transformers/" class="card-link">Explore Evolution →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">06</div>
+        <h3>Technical API Docs</h3>
+        <p>Standardized documentation for internal AI APIs, optimized for high developer experience and indexing.</p>
+        <a href="https://jacksteve-code.github.io/my--api--docs/" class="card-link">Explore Docs →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-index">07</div>
+        <h3>The AI Blog</h3>
+        <p>Interactive platform exploring AI co-authorship and the next generation of technical communication.</p>
+        <a href="https://jacksteve-code.github.io/my-ai-blog/" class="card-link">Visit Blog →</a>
+      </div>
+
     </div>
   </main>
 
