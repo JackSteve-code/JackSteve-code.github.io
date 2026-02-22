@@ -1,207 +1,170 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack – AI/ML & LLMOps Specialist</title>
+  <title>Jack – Verified AI/ML & LLMOps Expert</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-blue: #0052cc;
-      --dark-text: #262626;
-      --slate-grey: #5e6c84;
-      --light-bg: #f4f5f7;
-      --white: #ffffff;
+      --toptal-blue: #0052cc;
+      --toptal-green: #00cd6b; /* Toptal's signature action color */
+      --deep-black: #111827;
+      --text-main: #374151;
+      --border-color: #e5e7eb;
+      --bg-light: #f9fafb;
     }
 
     body { 
       font-family: 'Inter', sans-serif; 
-      color: var(--dark-text);
-      background-color: var(--white);
-      line-height: 1.6;
+      color: var(--text-main); 
+      background: var(--white); 
       margin: 0;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Premium Hero Section */
-    .hero {
-      background-color: var(--light-bg);
-      padding: 100px 20px;
-      text-align: center;
-      border-bottom: 1px solid #e1e4e8;
+    /* Toptal Style Header */
+    header {
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
     }
 
-    .hero h1 { 
-      font-size: 3rem; 
+    .logo { font-weight: 800; font-size: 1.5rem; color: var(--deep-black); }
+
+    /* Hero Section */
+    .hero-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 40px;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-text { flex: 2; }
+    .hero-text h1 { 
+      font-size: 3.5rem; 
       font-weight: 800; 
+      color: var(--deep-black); 
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    .hero-text p { font-size: 1.25rem; line-height: 1.6; color: var(--text-main); margin-bottom: 30px; }
+
+    /* The "Verified Expert" Sidebar Card */
+    .expert-card {
+      flex: 1;
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .expert-status {
+      color: var(--toptal-green);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       margin-bottom: 15px;
-      letter-spacing: -0.02em;
     }
 
-    .hero p { 
-      font-size: 1.25rem; 
-      color: var(--slate-grey); 
-      max-width: 800px; 
-      margin: 0 auto 35px auto; 
-    }
+    .expert-status::before { content: '✔'; }
 
-    /* Skills Cloud */
-    .skill-badge {
-      display: inline-block;
-      padding: 8px 18px;
-      margin: 5px;
-      background: var(--white);
-      border: 1px solid #dcdfe4;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      color: var(--primary-blue);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    }
+    .expert-name { font-weight: 700; font-size: 1.2rem; color: var(--deep-black); }
+    .expert-sub { font-size: 0.9rem; color: #6b7280; margin-bottom: 20px; }
 
-    /* Action Buttons (Social Only) */
-    .cta-group { margin-top: 40px; }
-    .btn {
-      padding: 14px 32px;
-      border-radius: 6px;
+    /* Toptal Green Button */
+    .btn-green {
+      background: var(--toptal-green);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 4px;
       text-decoration: none;
       font-weight: 700;
       display: inline-block;
-      transition: 0.3s;
-    }
-    .btn-outline { 
-      background-color: transparent; 
-      color: var(--primary-blue); 
-      border: 2px solid var(--primary-blue); 
-      margin: 0 10px;
-    }
-    .btn:hover { 
-      background-color: var(--primary-blue); 
-      color: white; 
-      transform: translateY(-2px); 
+      transition: background 0.2s;
     }
 
-    /* Main Content */
-    .container { max-width: 1200px; margin: 80px auto; padding: 0 30px; }
-    .section-header { margin-bottom: 50px; }
-    .section-header h2 { 
-        font-size: 1.8rem; 
-        font-weight: 700; 
-        border-left: 5px solid var(--primary-blue); 
-        padding-left: 20px; 
+    .btn-green:hover { background: #00b35d; }
+
+    /* Content Grid */
+    .container { max-width: 1200px; margin: 100px auto; padding: 0 40px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .project-card {
+      border-top: 4px solid var(--toptal-blue);
+      padding: 30px;
+      background: white;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
     }
 
-    /* Grid & Cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-    
-    .card { 
-      background: var(--white); 
-      border-radius: 12px; 
-      padding: 40px; 
-      border: 1px solid #eaedf0;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      box-shadow: 0 4px 6px rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-    }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card h3 { margin-top: 0; font-weight: 800; }
 
-    .card:hover { 
-      transform: translateY(-10px); 
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
-      border-color: var(--primary-blue);
-    }
-
-    .card h3 { font-size: 1.5rem; margin-top: 0; margin-bottom: 15px; color: var(--dark-text); }
-    .card p { color: var(--slate-grey); font-size: 1.05rem; margin-bottom: 30px; flex-grow: 1; }
-
-    .card-link { 
-      color: var(--primary-blue); 
-      text-decoration: none; 
-      font-weight: 700; 
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .card-link:after { content: ' →'; transition: 0.2s; }
-    .card-link:hover:after { padding-left: 5px; }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
+    @media (max-width: 900px) {
+      .hero-container { flex-direction: column; text-align: center; }
       .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Jack – AI/ML & LLMOps Specialist</h1>
-    <p>Building production-grade AI systems • Author of in-depth technical blueprints for LLMOps, Federated Learning, and Distributed Infrastructure.</p>
-    
-    <div class="skills-cloud">
-      <span class="skill-badge">PyTorch</span>
-      <span class="skill-badge">LangChain</span>
-      <span class="skill-badge">vLLM</span>
-      <span class="skill-badge">RAG</span>
-      <span class="skill-badge">Federated Learning</span>
-      <span class="skill-badge">Fraud Detection</span>
-      <span class="skill-badge">Compute Optimization</span>
-      <span class="skill-badge">MLOps</span>
+  <header>
+    <div class="logo">JACK.AI</div>
+    <nav>
+      <a href="mailto:js8671574@gmail.com" style="text-decoration:none; font-weight:600; color:var(--text-main)">Hire Expert</a>
+    </nav>
+  </header>
+
+  <section class="hero-container">
+    <div class="hero-text">
+      <h1>Deploying the <span style="color:var(--toptal-blue)">Top 3%</span> of AI/ML Engineering</h1>
+      <p>Jack is an exclusive specialist in production-grade LLMOps, Federated Learning, and high-performance compute optimization. Expert at turning complex blueprints into scalable infrastructure.</p>
+      <a href="https://www.linkedin.com/in/jack-steve-7431112a9" class="btn-green">Hire Top AI Talent</a>
     </div>
 
-    <div class="cta-group">
-      <a href="https://www.linkedin.com/in/jack-steve-7431112a9" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
-      <a href="mailto:js8671574@gmail.com" class="btn btn-outline">Email Contact</a>
+    <div class="expert-card">
+      <div class="expert-status">Verified Expert</div>
+      <div class="expert-name">Jack Steve</div>
+      <div class="expert-sub">AI Infrastructure & LLMOps</div>
+      <div style="border-top: 1px solid #ddd; padding-top: 15px; font-size: 0.85rem;">
+        <strong>PREVIOUSLY AT</strong><br>
+        <span style="letter-spacing: 1px; color: #444;">DISTRIBUTED SYSTEMS INC.</span>
+      </div>
     </div>
   </section>
 
   <main class="container">
-    <div class="section-header">
-      <h2>Engineering Blueprints & Case Studies</h2>
-    </div>
-
     <div class="grid">
-      <div class="card">
-        <h3>Fraud Detector Hub</h3>
-        <p>A specialized documentation hub for real-time fraud detection strategies. Built with Docusaurus to provide scalable technical guides on financial security and transaction monitoring.</p>
-        <a href="https://jacksteve-code.github.io/Fraud-detector/" class="card-link">View Fraud Detector Hub</a>
+      <div class="project-card">
+        <h3 style="color: var(--toptal-green)">01</h3>
+        <h3>Fraud Detector</h3>
+        <p>Advanced real-time transaction monitoring documentation hub. Built for enterprise financial safety.</p>
+        <a href="https://jacksteve-code.github.io/Fraud-detector/" style="color:var(--toptal-blue); font-weight:700; text-decoration:none;">View Case Study →</a>
       </div>
 
-      <div class="card">
-        <h3>Scalable LLMOps Pipeline</h3>
-        <p>A massive 46-page production architecture guide. Covers end-to-end deployment using LangChain, RAG, vLLM, and enterprise-grade observability.</p>
-        <a href="https://jacksteve-code.github.io/Scalable-llmop/" class="card-link">View Pipeline Guide</a>
+      <div class="project-card">
+        <h3 style="color: var(--toptal-blue)">02</h3>
+        <h3>LLMOps Pipeline</h3>
+        <p>46-page guide on enterprise RAG, vLLM, and high-performance model observability.</p>
+        <a href="https://jacksteve-code.github.io/Scalable-llmop/" style="color:var(--toptal-blue); font-weight:700; text-decoration:none;">View Pipeline →</a>
       </div>
 
-      <div class="card">
-        <h3>Federated Learning Blueprint</h3>
-        <p>38-page technical manual on decentralized AI. Focuses on privacy-preserving training with Differential Privacy and Flower/NVIDIA FLARE.</p>
-        <a href="https://jacksteve-code.github.io/federated-blueprint/" class="card-link">View FL Blueprint</a>
-      </div>
-
-      <div class="card">
-        <h3>Compute & Infrastructure Optimization</h3>
-        <p>38-page deep dive into GPU/TPU hardware stacks, mixed-precision training, and distributed inference for large-scale models.</p>
-        <a href="https://jacksteve-code.github.io/AI-Infrastructure-and-compute-optimization/" class="card-link">Read Infrastructure Guide</a>
-      </div>
-
-      <div class="card">
-        <h3>RNNs to Transformers</h3>
-        <p>A 23-page architectural journey. Deep dive into the math and code evolution from sequence models to modern Self-Attention mechanisms.</p>
-        <a href="https://jacksteve-code.github.io/RNNS-to-transformers/" class="card-link">Explore the Architecture</a>
-      </div>
-
-      <div class="card">
-        <h3>Technical API Documentation</h3>
-        <p>Enterprise-standard documentation for internal AI APIs. Built for high developer experience (DX) and RAG-ready indexing.</p>
-        <a href="https://jacksteve-code.github.io/my--api--docs/" class="card-link">Explore API Docs</a>
-      </div>
-
-      <div class="card">
-        <h3>The AI Blog: Future of Authored Content</h3>
-        <p>My interactive Docusaurus blog exploring the convergence of AI co-authorship and the next generation of technical communication.</p>
-        <a href="https://jacksteve-code.github.io/my-ai-blog/" class="card-link">Visit Blog</a>
+      <div class="project-card">
+        <h3>03</h3>
+        <h3>FL Blueprint</h3>
+        <p>Decentralized AI training manual focusing on privacy and Differential Privacy.</p>
+        <a href="https://jacksteve-code.github.io/federated-blueprint/" style="color:var(--toptal-blue); font-weight:700; text-decoration:none;">Read Blueprint →</a>
       </div>
     </div>
   </main>
