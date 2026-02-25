@@ -39,6 +39,7 @@
 
     .logo { font-weight: 800; font-size: 1.6rem; color: var(--deep-black); letter-spacing: -1.5px; }
 
+    /* Preserved Initial Hero Section */
     .hero-section {
       background: linear-gradient(180deg, var(--slate-grey-bg) 0%, #ffffff 100%);
       padding: 100px 0;
@@ -102,9 +103,27 @@
       box-shadow: 0 4px 14px rgba(0, 205, 107, 0.4);
     }
 
-    .btn-action:hover { 
-        background: #00b35d; 
-        transform: translateY(-2px);
+    /* Philosophy Break Section */
+    .philosophy-break {
+        background: var(--deep-black);
+        color: #ffffff;
+        padding: 80px 40px;
+        text-align: center;
+    }
+
+    .philosophy-break h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin: 0;
+    }
+
+    .philosophy-break p {
+        color: var(--toptal-green);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin-top: 10px;
     }
 
     .container { max-width: 1200px; margin: 100px auto; padding: 0 40px; }
@@ -119,7 +138,7 @@
         text-align: center;
     }
 
-    /* Experience Section Styles */
+    /* Experience Grid */
     .experience-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -139,9 +158,8 @@
     .exp-content h3 { margin: 0 0 10px 0; font-weight: 800; color: var(--deep-black); font-size: 1.5rem; }
     .exp-company { font-weight: 700; color: #64748b; margin-bottom: 15px; display: block; }
     .exp-content ul { padding-left: 20px; margin: 0; color: var(--text-main); }
-    .exp-content li { margin-bottom: 8px; }
 
-    /* Project Grid Styles */
+    /* Project Grid */
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
 
     .project-card {
@@ -153,25 +171,18 @@
       flex-direction: column;
     }
 
-    .project-card:hover { 
-        border-color: var(--toptal-green); 
-        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); 
-        transform: scale(1.02);
-    }
-    
-    .project-index { font-weight: 900; color: var(--slate-grey-bg); margin-bottom: 25px; font-size: 2.5rem; line-height: 1; }
-    .project-card h3 { margin: 0 0 18px 0; font-weight: 800; color: var(--deep-black); font-size: 1.4rem; }
-    .card-link { color: var(--toptal-blue); font-weight: 800; text-decoration: none; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; }
+    .project-card:hover { border-color: var(--toptal-green); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); transform: scale(1.02); }
+    .project-index { font-weight: 900; color: var(--slate-grey-bg); margin-bottom: 25px; font-size: 2.5rem; }
+    .card-link { color: var(--toptal-blue); font-weight: 800; text-decoration: none; font-size: 0.95rem; text-transform: uppercase; }
 
     @media (max-width: 1024px) { 
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      .experience-item { grid-template-columns: 1fr; gap: 10px; }
+        .experience-item { grid-template-columns: 1fr; gap: 10px; }
+        .grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-      .hero-container { flex-direction: column; text-align: center; }
-      .grid { grid-template-columns: 1fr; }
-      header { padding: 20px 40px; }
-      .hero-text h1 { font-size: 2.8rem; }
+        .hero-container { flex-direction: column; text-align: center; }
+        .grid { grid-template-columns: 1fr; }
+        header { padding: 20px 40px; }
     }
   </style>
 </head>
@@ -187,21 +198,26 @@
   <section class="hero-section">
     <div class="hero-container">
       <div class="hero-text">
-        <h1>Building <span style="color:var(--toptal-green)">Production-Grade</span> AI Infrastructure.</h1>
-        <p>"Writing bad documentation is easy; architecting high-performance, scalable ML systems is where the 3% reside." I am a Software and ML Engineer specialized in distributed infrastructure and LLMOps.</p>
+        <h1>High-Performance <span style="color:var(--toptal-green)">AI Infrastructure.</span></h1>
+        <p>Software and ML Engineer specializing in AI/ML infrastructure. Architecting production-grade LLMOps pipelines and distributed systems for the modern AI stack[cite: 8, 10, 11].</p>
         <a href="https://www.linkedin.com/in/jack-steve-7431112a9" target="_blank" class="btn-action">Connect on LinkedIn</a>
       </div>
 
       <div class="expert-card">
         <div class="expert-status">✓ Verified Engineering Expert</div>
         <div class="expert-name">Jack Steve</div>
-        <div class="expert-sub">AI Infrastructure & Systems</div>
+        <div class="expert-sub">AI Infrastructure & Systems [cite: 2]</div>
         <div style="border-top: 2px solid var(--slate-grey-bg); padding-top: 25px; margin-top: 10px;">
-          <span style="font-size: 0.8rem; font-weight: 800; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase;">Technical Stack</span>
-          <p style="font-size: 1rem; font-weight: 600; color: var(--deep-black); margin: 12px 0 0 0;">PyTorch • vLLM • LangChain • MLOps • Kubernetes</p>
+          <span style="font-size: 0.8rem; font-weight: 800; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase;">Technical Focus</span>
+          <p style="font-size: 1rem; font-weight: 600; color: var(--deep-black); margin: 12px 0 0 0;">PyTorch • vLLM • LangChain • MLOps • Distributed Compute </p>
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="philosophy-break">
+    <h2>"There has to be a way!"</h2>
+    <p>In every complex system, in every architectural bottleneck.</p>
   </section>
 
   <main class="container">
@@ -209,97 +225,73 @@
     <span class="section-label">Professional Engineering Experience</span>
     
     <div class="experience-grid">
-      
       <div class="experience-item">
-        <div class="exp-date">JAN 2022 — PRESENT</div>
+        <div class="exp-date">JAN 2022 — PRESENT [cite: 18]</div>
         <div class="exp-content">
-          <h3>Independent AI/ML Content Architect</h3>
-          <span class="exp-company">Strategic Infrastructure Consulting</span>
+          <h3>Independent AI/ML Content Architect [cite: 17]</h3>
+          <span class="exp-company">Strategic Infrastructure Consulting [cite: 19]</span>
           <ul>
-            <li>Architected and authored four flagship technical blueprints on LLMOps, AI Infrastructure, and Federated Learning.</li>
-            <li>Achieved a 4.9/5.0 rating across global high-growth startups and educational platforms.</li>
-            <li>Reduced ML engineer ramp-up time by an estimated 15 hours per hire via production-grade documentation.</li>
+            <li>Architected production-ready blueprints totaling 200+ pages on LLMOps, AI Infra, and Federated Learning[cite: 21].</li>
+            <li>Reduced ML engineer ramp-up time by an estimated 15 hours per hire via high-signal documentation[cite: 30].</li>
+            <li>Secured and led technical contracts for high-growth AI startups[cite: 27].</li>
           </ul>
         </div>
       </div>
 
       <div class="experience-item">
-        <div class="exp-date">JUN 2023 — DEC 2023</div>
+        <div class="exp-date">JUN 2023 — DEC 2023 [cite: 32]</div>
         <div class="exp-content">
-          <h3>Senior Technical Writer (Contract)</h3>
-          <span class="exp-company">AI-Powered FinTech Startup</span>
+          <h3>Senior Technical Writer (Contract) [cite: 32]</h3>
+          <span class="exp-company">AI-Powered FinTech Startup [cite: 32]</span>
           <ul>
-            <li>Documented agentic AI workflows built with LangChain, detailing memory management and tool use.</li>
-            <li>Authored and maintained 15+ API endpoints, facilitating financial data integration.</li>
-            <li>Contributed to a 25% reduction in Tier-1 support tickets post-launch.</li>
+            <li>Documented agentic AI workflows built with LangChain, covering memory and tool use[cite: 35].</li>
+            <li>Maintained 15+ API endpoints, facilitating integration with financial data partners[cite: 36].</li>
+            <li>Reduced Tier-1 support tickets by 25% post-launch[cite: 37].</li>
           </ul>
         </div>
       </div>
 
       <div class="experience-item">
-        <div class="exp-date">JUN 2019 — DEC 2021</div>
+        <div class="exp-date">JUN 2019 — DEC 2021 [cite: 38]</div>
         <div class="exp-content">
-          <h3>Software Development Engineer</h3>
-          <span class="exp-company">Tech Solutions Ltd.</span>
+          <h3>Software Development Engineer [cite: 38]</h3>
+          <span class="exp-company">Tech Solutions Ltd. [cite: 38]</span>
           <ul>
-            <li>Architected role-based user management systems using Django and JavaScript.</li>
-            <li>Optimized SQL queries and caching, improving data retrieval efficiency by 30%.</li>
-            <li>Managed codebase integrity via Git across 3 major production releases.</li>
+            <li>Architected and implemented role-based user management systems using Django and JavaScript[cite: 41].</li>
+            <li>Optimized SQL queries and caching strategies, improving data retrieval efficiency by 30%[cite: 42].</li>
+            <li>Led technical spec creation for 12+ API endpoints and managed codebase integrity via Git[cite: 44, 45].</li>
           </ul>
         </div>
       </div>
-
     </div>
 
     <span class="section-label">Technical Blueprints & Source Code</span>
     
     <div class="grid">
-      
       <div class="project-card">
         <div class="project-index">01</div>
-        <h3>Scalable LLMOps</h3>
-        <p>A definitive guide to productionizing LLMs. Details architectural layers from orchestration (LangChain) to inference (vLLM).</p>
+        <h3>Scalable LLMOps [cite: 6, 23]</h3>
+        <p>A reference architecture for productionizing LLMs, from prompt engineering to observability[cite: 49, 50, 52].</p>
         <a href="https://jacksteve-code.github.io/Scalable-llmop/" class="card-link">View Pipeline →</a>
       </div>
 
       <div class="project-card">
         <div class="project-index">02</div>
-        <h3>Compute Optimization</h3>
-        <p>Technical deep-dive into GPU/TPU architectures, mixed-precision training, and quantization techniques (AWQ, GPTQ).</p>
+        <h3>Compute Optimization [cite: 6, 24]</h3>
+        <p>Deep-dive into hardware stacks and parallelism strategies for 35% lower cloud costs[cite: 54, 56, 57].</p>
         <a href="https://jacksteve-code.github.io/AI-Infrastructure-and-compute-optimization/" class="card-link">Explore Ops →</a>
       </div>
 
       <div class="project-card">
         <div class="project-index">03</div>
-        <h3>Federated Blueprint</h3>
-        <p>Compliance-ready framework for building privacy-first, distributed AI systems using secure aggregation and Differential Privacy.</p>
+        <h3>Federated Blueprint [cite: 6, 25]</h3>
+        <p>Compliance-ready framework for privacy-first, distributed AI in regulated industries[cite: 58, 59, 60].</p>
         <a href="https://jacksteve-code.github.io/federated-blueprint/" class="card-link">Read Blueprint →</a>
       </div>
-
-      <div class="project-card">
-        <div class="project-index">04</div>
-        <h3>Transformer Evolution</h3>
-        <p>Mathematical and architectural survey bridging sequence models from RNNs/LSTMs to modern Self-Attention systems.</p>
-        <a href="https://jacksteve-code.github.io/RNNS-to-transformers/" class="card-link">Read Architecture →</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-index">05</div>
-        <h3>Fraud Detector Hub</h3>
-        <p>Infrastructure documentation for real-time monitoring and transaction fraud detection strategies.</p>
-        <a href="https://jacksteve-code.github.io/Fraud-detector/" class="card-link">View Documentation →</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-index">06</div>
-        <h3>Enterprise API Docs</h3>
-        <p>Standardized API documentation optimized for developer experience and RAG indexing efficiency.</p>
-        <a href="https://jacksteve-code.github.io/my--api--docs/" class="card-link">Explore Docs →</a>
-      </div>
-
     </div>
   </main>
 
 </body>
 </html>
+
 
