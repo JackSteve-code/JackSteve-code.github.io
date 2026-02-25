@@ -39,7 +39,7 @@
 
     .logo { font-weight: 800; font-size: 1.6rem; color: var(--deep-black); letter-spacing: -1.5px; }
 
-    /* Preserved Initial Hero Section */
+    /* Original High-Performance Hero */
     .hero-section {
       background: linear-gradient(180deg, var(--slate-grey-bg) 0%, #ffffff 100%);
       padding: 100px 0;
@@ -66,6 +66,15 @@
     }
 
     .hero-text p { font-size: 1.3rem; color: var(--text-main); margin-bottom: 40px; font-weight: 400; }
+
+    /* Philosophy Line Highlight */
+    .philosophy-line {
+      font-weight: 700;
+      color: var(--toptal-blue);
+      display: block;
+      margin-top: 20px;
+      font-style: italic;
+    }
 
     .expert-card {
       flex: 1;
@@ -103,29 +112,6 @@
       box-shadow: 0 4px 14px rgba(0, 205, 107, 0.4);
     }
 
-    /* Philosophy Break Section */
-    .philosophy-break {
-        background: var(--deep-black);
-        color: #ffffff;
-        padding: 80px 40px;
-        text-align: center;
-    }
-
-    .philosophy-break h2 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        letter-spacing: -1px;
-        margin: 0;
-    }
-
-    .philosophy-break p {
-        color: var(--toptal-green);
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 700;
-        margin-top: 10px;
-    }
-
     .container { max-width: 1200px; margin: 100px auto; padding: 0 40px; }
     .section-label { 
         text-transform: uppercase; 
@@ -138,7 +124,7 @@
         text-align: center;
     }
 
-    /* Experience Grid */
+    /* Professional Experience Grid */
     .experience-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -176,13 +162,8 @@
     .card-link { color: var(--toptal-blue); font-weight: 800; text-decoration: none; font-size: 0.95rem; text-transform: uppercase; }
 
     @media (max-width: 1024px) { 
-        .experience-item { grid-template-columns: 1fr; gap: 10px; }
-        .grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-        .hero-container { flex-direction: column; text-align: center; }
-        .grid { grid-template-columns: 1fr; }
-        header { padding: 20px 40px; }
+      .experience-item { grid-template-columns: 1fr; gap: 10px; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -199,25 +180,22 @@
     <div class="hero-container">
       <div class="hero-text">
         <h1>High-Performance <span style="color:var(--toptal-green)">AI Infrastructure.</span></h1>
-        <p>Software and ML Engineer specializing in AI/ML infrastructure. Architecting production-grade LLMOps pipelines and distributed systems for the modern AI stack[cite: 8, 10, 11].</p>
+        <p>Software and ML Engineer specializing in AI/ML infrastructure.
+          <span class="philosophy-line">"There has to be a way!" — In every complex system, in every architectural bottleneck.</span>
+        </p>
         <a href="https://www.linkedin.com/in/jack-steve-7431112a9" target="_blank" class="btn-action">Connect on LinkedIn</a>
       </div>
 
       <div class="expert-card">
         <div class="expert-status">✓ Verified Engineering Expert</div>
         <div class="expert-name">Jack Steve</div>
-        <div class="expert-sub">AI Infrastructure & Systems [cite: 2]</div>
+        <div class="expert-sub">AI Infrastructure & Systems</div>
         <div style="border-top: 2px solid var(--slate-grey-bg); padding-top: 25px; margin-top: 10px;">
           <span style="font-size: 0.8rem; font-weight: 800; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase;">Technical Focus</span>
-          <p style="font-size: 1rem; font-weight: 600; color: var(--deep-black); margin: 12px 0 0 0;">PyTorch • vLLM • LangChain • MLOps • Distributed Compute </p>
+          <p style="font-size: 1rem; font-weight: 600; color: var(--deep-black); margin: 12px 0 0 0;">PyTorch • vLLM • LangChain • MLOps • Distributed Compute</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="philosophy-break">
-    <h2>"There has to be a way!"</h2>
-    <p>In every complex system, in every architectural bottleneck.</p>
   </section>
 
   <main class="container">
@@ -226,10 +204,10 @@
     
     <div class="experience-grid">
       <div class="experience-item">
-        <div class="exp-date">JAN 2022 — PRESENT [cite: 18]</div>
+        <div class="exp-date">JAN 2022 — PRESENT</div>
         <div class="exp-content">
-          <h3>Independent AI/ML Content Architect [cite: 17]</h3>
-          <span class="exp-company">Strategic Infrastructure Consulting [cite: 19]</span>
+          <h3>Independent AI/ML Content Architect</h3>
+          <span class="exp-company">Strategic Infrastructure Consulting [cite: 17, 18]</span>
           <ul>
             <li>Architected production-ready blueprints totaling 200+ pages on LLMOps, AI Infra, and Federated Learning[cite: 21].</li>
             <li>Reduced ML engineer ramp-up time by an estimated 15 hours per hire via high-signal documentation[cite: 30].</li>
@@ -239,9 +217,9 @@
       </div>
 
       <div class="experience-item">
-        <div class="exp-date">JUN 2023 — DEC 2023 [cite: 32]</div>
+        <div class="exp-date">JUN 2023 — DEC 2023</div>
         <div class="exp-content">
-          <h3>Senior Technical Writer (Contract) [cite: 32]</h3>
+          <h3>Senior Technical Writer (Contract)</h3>
           <span class="exp-company">AI-Powered FinTech Startup [cite: 32]</span>
           <ul>
             <li>Documented agentic AI workflows built with LangChain, covering memory and tool use[cite: 35].</li>
@@ -252,9 +230,9 @@
       </div>
 
       <div class="experience-item">
-        <div class="exp-date">JUN 2019 — DEC 2021 [cite: 38]</div>
+        <div class="exp-date">JUN 2019 — DEC 2021</div>
         <div class="exp-content">
-          <h3>Software Development Engineer [cite: 38]</h3>
+          <h3>Software Development Engineer</h3>
           <span class="exp-company">Tech Solutions Ltd. [cite: 38]</span>
           <ul>
             <li>Architected and implemented role-based user management systems using Django and JavaScript[cite: 41].</li>
@@ -270,22 +248,22 @@
     <div class="grid">
       <div class="project-card">
         <div class="project-index">01</div>
-        <h3>Scalable LLMOps [cite: 6, 23]</h3>
-        <p>A reference architecture for productionizing LLMs, from prompt engineering to observability[cite: 49, 50, 52].</p>
+        <h3>Scalable LLMOps</h3>
+        <p>A reference architecture for productionizing LLMs, from prompt engineering to observability[cite: 23].</p>
         <a href="https://jacksteve-code.github.io/Scalable-llmop/" class="card-link">View Pipeline →</a>
       </div>
 
       <div class="project-card">
         <div class="project-index">02</div>
-        <h3>Compute Optimization [cite: 6, 24]</h3>
-        <p>Deep-dive into hardware stacks and parallelism strategies for 35% lower cloud costs[cite: 54, 56, 57].</p>
+        <h3>Compute Optimization</h3>
+        <p>Deep-dive into hardware stacks and parallelism strategies for 35% lower cloud costs[cite: 24].</p>
         <a href="https://jacksteve-code.github.io/AI-Infrastructure-and-compute-optimization/" class="card-link">Explore Ops →</a>
       </div>
 
       <div class="project-card">
         <div class="project-index">03</div>
-        <h3>Federated Blueprint [cite: 6, 25]</h3>
-        <p>Compliance-ready framework for privacy-first, distributed AI in regulated industries[cite: 58, 59, 60].</p>
+        <h3>Federated Blueprint</h3>
+        <p>Compliance-ready framework for privacy-first, distributed AI in regulated industries[cite: 25].</p>
         <a href="https://jacksteve-code.github.io/federated-blueprint/" class="card-link">Read Blueprint →</a>
       </div>
     </div>
