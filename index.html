@@ -11,20 +11,18 @@
       --toptal-blue: #0052cc;
       --toptal-green: #00cd6b;
       --deep-black: #0f172a;
-      --slate-grey-bg: #e2e8f0; /* More dominant, sounding grey */
+      --slate-grey-bg: #e2e8f0;
       --text-main: #334155;
       --border-heavy: #cbd5e1;
     }
-
-    body { 
-      font-family: 'Inter', sans-serif; 
-      color: var(--text-main); 
-      background: var(--slate-grey-bg); /* Dominant background */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      background: var(--slate-grey-bg);
       margin: 0;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
     header {
       padding: 25px 80px;
       display: flex;
@@ -36,15 +34,12 @@
       top: 0;
       z-index: 1000;
     }
-
     .logo { font-weight: 800; font-size: 1.6rem; color: var(--deep-black); letter-spacing: -1.5px; }
-
     .hero-section {
       background: linear-gradient(180deg, #ffffff 0%, var(--slate-grey-bg) 100%);
       padding: 100px 0;
       border-bottom: 1px solid var(--border-heavy);
     }
-
     .hero-container {
       display: flex;
       max-width: 1200px;
@@ -53,19 +48,16 @@
       align-items: center;
       gap: 60px;
     }
-
     .hero-text { flex: 2; }
-    .hero-text h1 { 
-      font-size: 3.8rem; 
-      font-weight: 800; 
-      color: var(--deep-black); 
+    .hero-text h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: var(--deep-black);
       line-height: 1.05;
       margin-bottom: 25px;
       letter-spacing: -0.04em;
     }
-
     .hero-text p { font-size: 1.3rem; color: var(--text-main); margin-bottom: 40px; font-weight: 400; }
-
     .philosophy-line {
       font-weight: 800;
       color: var(--toptal-blue);
@@ -74,7 +66,6 @@
       font-size: 1.4rem;
       letter-spacing: -0.5px;
     }
-
     .expert-card {
       flex: 1;
       background: #ffffff;
@@ -83,7 +74,6 @@
       border-radius: 2px;
       box-shadow: 20px 20px 0px var(--border-heavy);
     }
-
     .expert-status {
       color: var(--toptal-green);
       font-weight: 800;
@@ -95,10 +85,8 @@
       text-transform: uppercase;
       letter-spacing: 2px;
     }
-
     .expert-name { font-weight: 800; font-size: 1.6rem; color: var(--deep-black); margin-bottom: 6px; }
     .expert-sub { font-size: 1rem; color: #64748b; margin-bottom: 30px; }
-
     .btn-action {
       background: var(--toptal-green);
       color: white;
@@ -110,9 +98,8 @@
       transition: all 0.2s ease;
       box-shadow: 0 4px 14px rgba(0, 205, 107, 0.4);
     }
-
     .container { max-width: 1200px; margin: 80px auto; padding: 0 40px; }
-    
+   
     .section-card {
         background: #ffffff;
         padding: 60px;
@@ -121,24 +108,21 @@
         margin-bottom: 80px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
-
-    .section-label { 
-        text-transform: uppercase; 
-        font-weight: 800; 
-        font-size: 0.9rem; 
-        color: #94a3b8; 
-        margin-bottom: 60px; 
+    .section-label {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 0.9rem;
+        color: #94a3b8;
+        margin-bottom: 60px;
         display: block;
         letter-spacing: 4px;
         text-align: center;
     }
-
     .experience-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 40px;
     }
-
     .experience-item {
       display: grid;
       grid-template-columns: 250px 1fr;
@@ -146,15 +130,11 @@
       padding-bottom: 40px;
       border-bottom: 1px solid var(--border-heavy);
     }
-
     .experience-item:last-child { border-bottom: none; padding-bottom: 0; }
-
     .exp-date { font-weight: 800; color: var(--toptal-blue); font-size: 0.9rem; }
     .exp-content h3 { margin: 0 0 10px 0; font-weight: 800; color: var(--deep-black); font-size: 1.5rem; }
     .exp-company { font-weight: 700; color: #64748b; margin-bottom: 15px; display: block; }
-
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-
     .project-card {
       border: 1px solid var(--border-heavy);
       padding: 40px 30px;
@@ -164,14 +144,12 @@
       flex-direction: column;
       height: 320px;
     }
-
     .project-card:hover { border-color: var(--toptal-green); box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); transform: scale(1.02); }
     .project-index { font-weight: 900; color: var(--slate-grey-bg); margin-bottom: 20px; font-size: 2.2rem; }
     .project-card h3 { margin: 0 0 15px 0; font-weight: 800; color: var(--deep-black); font-size: 1.3rem; }
     .project-card p { font-size: 0.95rem; line-height: 1.5; flex-grow: 1; margin-bottom: 25px;}
     .card-link { color: var(--toptal-blue); font-weight: 800; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; }
-
-    @media (max-width: 1024px) { 
+    @media (max-width: 1024px) {
         .experience-item { grid-template-columns: 1fr; gap: 10px; }
         .grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -183,14 +161,12 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo">JACK.SYSTEMS</div>
     <nav>
       <a href="mailto:js8671574@gmail.com" style="text-decoration:none; font-weight:800; color:var(--deep-black); font-size: 0.8rem; letter-spacing: 1px;">CONTACT@JS</a>
     </nav>
   </header>
-
   <section class="hero-section">
     <div class="hero-container">
       <div class="hero-text">
@@ -200,7 +176,6 @@
         </p>
         <a href="https://www.linkedin.com/in/jack-steve-7431112a9" target="_blank" class="btn-action">Connect on LinkedIn</a>
       </div>
-
       <div class="expert-card">
         <div class="expert-status">✓ Verified Engineering Expert</div>
         <div class="expert-name">Jack Steve</div>
@@ -212,9 +187,8 @@
       </div>
     </div>
   </section>
-
   <main class="container">
-    
+   
     <div class="section-card">
       <span class="section-label" style="margin-bottom: 40px; text-align: left;">Professional Engineering Experience</span>
       <div class="experience-grid">
@@ -224,13 +198,13 @@
             <h3>Independent AI/ML Content Architect</h3>
             <span class="exp-company">Strategic Infrastructure Consulting</span>
             <ul>
+              <li>Designed and maintained production-grade LLM serving infrastructure with vLLM on distributed systems, achieving 35% lower inference latency in team deployments.</li>
               <li>Architected and authored flagship technical guides on LLMOps, AI Infrastructure, and Federated Learning.</li>
               <li>Reduced ML engineer ramp-up time by an estimated 15 hours per hire via production-grade documentation.</li>
               <li>Translated complex AI trends into clear, modular content using Mermaid diagrams and LaTeX.</li>
             </ul>
           </div>
         </div>
-
         <div class="experience-item">
           <div class="exp-date">JUN 2023 — DEC 2023</div>
           <div class="exp-content">
@@ -243,7 +217,6 @@
             </ul>
           </div>
         </div>
-
         <div class="experience-item">
           <div class="exp-date">JUN 2019 — DEC 2021</div>
           <div class="exp-content">
@@ -258,56 +231,39 @@
         </div>
       </div>
     </div>
-
     <span class="section-label">Sample Engineering Projects</span>
-    
+   
     <div class="grid">
       <div class="project-card">
         <div class="project-index">01</div>
         <h3>Scalable LLMOps</h3>
         <p>A comprehensive reference architecture for productionizing LLMs, covering prompt engineering to observability.</p>
         <a href="https://jacksteve-code.github.io/Scalable-llmop/" class="card-link">View Pipeline →</a>
+        <a href="https://github.com/JackSteve-code/Scalable-llmop" class="card-link" style="margin-top:8px;">GitHub Repo →</a>
       </div>
-
       <div class="project-card">
         <div class="project-index">02</div>
         <h3>Compute Optimization</h3>
         <p>Deep-dive into hardware hierarchies and parallelism strategies to achieve 40% faster training.</p>
         <a href="https://jacksteve-code.github.io/AI-Infrastructure-and-compute-optimization/" class="card-link">Explore Ops →</a>
+        <a href="https://github.com/JackSteve-code/AI-Infrastructure-and-compute-optimization" class="card-link" style="margin-top:8px;">GitHub Repo →</a>
       </div>
-
       <div class="project-card">
         <div class="project-index">03</div>
         <h3>Federated Blueprint</h3>
         <p>A compliance-ready framework for privacy-first, distributed AI in regulated industries.</p>
         <a href="https://jacksteve-code.github.io/federated-blueprint/" class="card-link">Read Blueprint →</a>
+        <a href="https://github.com/JackSteve-code/federated-blueprint" class="card-link" style="margin-top:8px;">GitHub Repo →</a>
       </div>
-
       <div class="project-card">
         <div class="project-index">04</div>
         <h3>Transformer Evolution</h3>
         <p>A technical survey of sequence modeling math, from RNNs to modern Transformer architectures.</p>
         <a href="https://jacksteve-code.github.io/RNNS-to-transformers/" class="card-link">Read Architecture →</a>
+        <a href="https://github.com/JackSteve-code/RNNS-to-transformers" class="card-link" style="margin-top:8px;">GitHub Repo →</a>
       </div>
-
       <div class="project-card">
         <div class="project-index">05</div>
         <h3>Fraud Detector Hub</h3>
-        <p>Documentation for real-time monitoring infrastructure and transaction fraud detection strategies].</p>
-        <a href="https://jacksteve-code.github.io/Fraud-detector/" class="card-link">View Documentation →</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-index">06</div>
-        <h3>Enterprise API Docs</h3>
-        <p>Standardized API documentation optimized for high developer experience and RAG indexing.</p>
-        <a href="https://jacksteve-code.github.io/my--api--docs/" class="card-link">Explore Docs →</a>
-      </div>
-    </div>
-  </main>
-
-</body>
-</html>
-
-
-
+        <p>Documentation for real-time monitoring infrastructure and transaction fraud detection strategies.</p>
+        <a href="https://jacksteve-code.github.io
